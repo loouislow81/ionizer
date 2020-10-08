@@ -1,6 +1,16 @@
 .c9
+.idea
 
 .swp
 
-git-rebase-refactor.sh
 logs.txt
+
+venv
+
+*.iml
+
+blacklist
+whitelist
+
+/__pycache__
+

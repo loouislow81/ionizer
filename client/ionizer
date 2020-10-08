@@ -1,15 +1,7 @@
 #!/usr/bin/env bash
-#
-# @file:
-# @description:
-# @version:
-# @author:
-# @license:
-# @copyright:
-#
 
 app_name=$(basename $0)
-version="v0.0.3"
+version="v0.0.4"
 
 nulled_ip="0.0.0.0"
 
@@ -100,14 +92,23 @@ aggregate_list() {
 
 harvest_list() {
   # --- args
-  adware_malware="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
-  fakenews="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts"
-  gambling="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts"
-  porn="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts"
-  social="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/social/hosts"
-  urls=($adware_malware $fakenews $gambling $porn $social)
+  adaway="https://raw.githubusercontent.com/loouislow81/ionizer/data/general/adaway.org/filters"
+  yoyo="https://raw.githubusercontent.com/loouislow81/ionizer/data/general/yoyo.org/filters"
+  malwaredomainlist="https://raw.githubusercontent.com/loouislow81/ionizer/data/general/malwaredomainlist.com/filters"
+  fakenews="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/fakenews/filters"
+  gambling="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/gambling/filters"
+  clefspeare13="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/porn/clefspeare13/filters"
+  sinfonietta="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/porn/sinfonietta/filters"
+  sinfoniettasnuff="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/porn/sinfonietta-snuff/filters"
+  tiuxo="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/porn/tiuxo/filters"
+  sinfonietta_s="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/social/sinfonietta/filters"
+  tiuxo_s="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/social/tiuxo/filters"
+  general=($adaway $yoyo $malwaredomainlist)
+  porn=($clefspeare13 $sinfonietta $sinfoniettasnuff $tiuxo)
+  social=($sinfonietta_s $tiuxo_s)
+  all_sources=($general $fakenews $gambling $porn $social)
   # --- worker
-  for l in "${urls[@]}"; do
+  for l in "${all_sources[@]}"; do
     echo -e "$title ... harvest (${l})"
     aggregate_list "${l}"
   done
@@ -139,9 +140,7 @@ total_ads_harvested() {
 
 
 banner() {
-  echo "  _             _              "
-  echo " (_)           (_)             "
-  echo "  _  ___  _ __  _ _______ _ __ "
+  echo "  _ ___  _ __   _ _______ _ __ "
   echo " | |/ _ \| '_ \| |_  / _ \ '__|"
   echo " | | (_) | | | | |/ /  __/ |   "
   echo " |_|\___/|_| |_|_/___\___|_| ";echo
