@@ -25,7 +25,7 @@ This is my daily use mini tool for all my Linux computers. Blocking ads works se
 </p>
 
 
-#### __usage
+### __usage
 
 **(!!)** May required root permissions.
 
