@@ -1,0 +1,210 @@
+#!/usr/bin/env bash
+#
+# @file:
+# @description:
+# @version:
+# @author:
+# @license:
+# @copyright:
+#
+
+app_name=$(basename $0)
+version="v0.0.3"
+
+nulled_ip="0.0.0.0"
+
+app_path='/usr/local/bin/${app_name}'
+outlist='/etc/ionizer/ipaddress.ions'
+temp_outlist="$outlist.tmp"
+
+blue='\e[94m'
+red='\e[91m'
+nc='\033[0m'
+title="${blue}[${app_name}]${nc}"
+
+
+######## funcs ########
+
+runas_root() {
+  if [ "$(whoami &2> /dev/null)" != "root" ] &&
+     [ "$(id -un &2> /dev/null)" != "root" ]; then
+    echo -e "$title ${red}permission denied.${nc}"
+    exit 1
+  fi
+}
+
+
+prerequisites() {
+  # --- arr
+  packages=('dnsmasq' 'wget' 'curl')
+  # --- worker
+  for p in ${packages[@]}; do
+    if ! which ${p} > /dev/null; then
+      echo -e "$title installing ${p} ..."
+      apt install -y ${p}
+    fi
+  done
+}
+
+
+install_app() {
+  if ! which ${app_path} > /dev/null; then
+    cp -r ./${app_name} /usr/local/bin/
+  fi
+}
+
+
+validate_url() {
+  # --- args
+  url=$1
+  # --- worker
+  http_response=`wget --spider --server-response ${url} 2>&1 | grep '200\ OK' | wc -l`
+  if [[ $http_response -eq "0" ]]; then
+    echo -e "$title !!! (${url}) not responding."
+  fi
+}
+
+
+check_outlist() {
+  if ! which ${outlist} > /dev/null; then
+    touch ${outlist}
+  fi; if [ -s ${outlist} ]; then
+    echo -e "$title (!) ions has blocklists."
+  else
+    echo -e "$title ions is empty, updating now..."
+    harvest_list
+    cleanup_list
+    total_ads_harvested "ads, after"
+    service dnsmasq restart
+    exit 1
+  fi
+}
+
+
+aggregate_list() {
+  # --- args
+  url=$1
+  # --- worker
+  validate_url "${url}"
+  curl -s ${url} | \
+    grep -v "#" | \
+    grep -v "::1" | \
+    sed '/^$/d' | \
+    sed 's/\ /\\ /g' | \
+    awk '{print $2}' | \
+    grep -v '^\\' | \
+    grep -v '\\$' | \
+    sort >> $temp_outlist
+}
+
+
+harvest_list() {
+  # --- args
+  adware_malware="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
+  fakenews="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts"
+  gambling="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts"
+  porn="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts"
+  social="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/social/hosts"
+  urls=($adware_malware $fakenews $gambling $porn $social)
+  # --- worker
+  for l in "${urls[@]}"; do
+    echo -e "$title ... harvest (${l})"
+    aggregate_list "${l}"
+  done
+}
+
+
+cleanup_list() {
+  # sort the aggregated results and remove any duplicates
+  # remove entries from the whitelist file if it exists at
+  # the root of the current user's home folder.
+  echo -e "$title removing duplicates and formatting lists"
+  cat $temp_outlist | \
+  sed $'s/\r$//' | \
+  sort | \
+  uniq | \
+  sed '/^$/d' | \
+  awk -v "IP=$nulled_ip" '{sub(/\r$/,""); print IP" "$0}' > $outlist
+}
+
+
+total_ads_harvested() {
+  # --- args
+  text=$1
+  # count how many domains/whitelists were added so it can
+  # be displayed to the user.
+  number_of_ads_blocked=$(cat $outlist | wc -l | sed 's/^[ \t]*//')
+  echo -e "$title ($number_of_ads_blocked) $text"
+}
+
+
+banner() {
+  echo "  _             _              "
+  echo " (_)           (_)             "
+  echo "  _  ___  _ __  _ _______ _ __ "
+  echo " | |/ _ \| '_ \| |_  / _ \ '__|"
+  echo " | | (_) | | | | |/ /  __/ |   "
+  echo " |_|\___/|_| |_|_/___\___|_| ";echo
+  echo -e "$title system-wide ad filter for DNSMASQ (${version})"
+  echo -e "$title ${blue}$ ${nc}${app_name} --help"
+  runas_root
+  prerequisites
+}
+
+
+######## init ########
+
+banner
+
+while test "$#" -gt 0;
+  do
+    case "$1" in
+
+      -h|--help)
+      shift
+        echo
+        echo -e " Options,"
+        echo
+        echo "  -h,--help ............... Display this information"
+        echo "  -u,--update ............. Update blocklists"
+        echo "  -l,--list ............... Show total blocklists"
+        echo "  -i,--install ............ Install to system"
+        echo
+        echo " Visit (https://github.com/loouislow81/ionizer) for more details."
+        echo " Submit issue at (https://github.com/loouislow81/ionizer/issues)"
+        echo;exit 1
+      shift;;
+
+      -u|--update)
+      shift
+        runas_root
+        prerequisites
+        check_outlist
+        total_ads_harvested "ads, before"
+        harvest_list
+        cleanup_list
+        total_ads_harvested "ads, after"
+        service dnsmasq restart
+      shift;;
+
+      -l|--list)
+      shift
+        runas_root
+        prerequisites
+        check_outlist
+        total_ads_harvested "total ads downloaded"
+      shift;;
+
+      -i|--install)
+      shift
+        install_app
+        echo -e "$title (!) installed at /usr/local/bin/"
+        echo -e "$title (!) now you can run it everywhere."
+        echo -e "$title add below line into ${red}/etc/dnsmasq.conf${nc}"
+        echo;echo -e "  ${red}addn-hosts=/etc/ionizer/ipaddress.ions${nc}"
+        echo
+      shift;;
+
+  esac
+done
+

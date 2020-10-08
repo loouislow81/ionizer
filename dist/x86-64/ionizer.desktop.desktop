@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=ionizer
+Exec=AppRun
+Icon=icon
+Type=Application
+Categories=Network;
+Name[en_US]=ionizer.desktop
