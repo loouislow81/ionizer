@@ -1,4 +1,4 @@
-# ionizer v0.0.3
+# ionizer v0.0.4
 
 <p align="left">
   <img src="https://badgen.net/github/release/loouislow81/ionizer">
