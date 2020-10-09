@@ -17,7 +17,7 @@
 
 System-wide ads filter with just `DNSMASQ` and `BASH` for Linux.
 
-This is my daily use mini-tool for all my Linux computers. The blocking ads work seamlessly better than installing web browser extensions and desktop apps. The filter data is hosted at Github by using a dedicated [generator](https://github.com/loouislow81/ionizer/tree/master/generator). The [client](https://github.com/loouislow81/ionizer/tree/master/client) is responsible for downloading and updating filter data.
+This is my daily use mini-tool for all my Linux computers. It blocks ads and works seamlessly better than installing web browser extensions and desktop apps. The filter data is hosted at Github by using a dedicated [generator](https://github.com/loouislow81/ionizer/tree/master/generator). The [client](https://github.com/loouislow81/ionizer/tree/master/client) is responsible for downloading and updating filter data.
 
 <p align="left">
   <img src="assets/screenshot_01.png" width="49%" height="auto">
@@ -27,9 +27,7 @@ This is my daily use mini-tool for all my Linux computers. The blocking ads work
 
 ### _usage
 
-**(!!)** May required root permissions.
-
-install and update the blocklists,
+install app and update the data,
 
 > ionizer will install `dnsmasq` package for you, if not installed,
 
