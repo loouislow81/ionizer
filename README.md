@@ -17,7 +17,7 @@
 
 System-wide ads filter with just `DNSMASQ` and `BASH` for Linux.
 
-This is my daily use mini tool for all my Linux computers. Blocking ads works seamlessly amazing than installing web browser extensions and desktop apps.
+This is my daily use mini-tool for all my Linux computers. The blocking ads work seamlessly better than installing web browser extensions and desktop apps. The filter data is hosted at Github by using a dedicated [generator](https://github.com/loouislow81/ionizer/tree/master/generator). The [client](https://github.com/loouislow81/ionizer/tree/master/client) is responsible for downloading and updating filter data.
 
 <p align="left">
   <img src="assets/screenshot_01.png" width="49%" height="auto">
@@ -25,9 +25,22 @@ This is my daily use mini tool for all my Linux computers. Blocking ads works se
 </p>
 
 
-### __usage
+### _usage
 
 **(!!)** May required root permissions.
+
+install and update the blocklists,
+
+> ionizer will install `dnsmasq` package for you, if not installed,
+
+```bash
+# install via download
+$ wget https://github.com/loouislow81/ionizer/releases/download/untagged-5240e09eafb9428546b3/ionizer_0.0.4_linux_x86-64.app_image
+$ sudo ionizer_0.0.4_linux_x86-64.app_image --install
+# install via source
+$ sudo ionizer --install
+$ sudo ionizer --update
+```
 
 edit file `/etc/dnsmasq.conf` and add this line,
 
@@ -37,14 +50,7 @@ addn-hosts=/etc/ionizer/ipaddress.ions
 ...
 ```
 
-install and update the blocklists, ionizer will install `dnsmasq` for you if not installed,
-
-```bash
-$ ionizer --install
-$ ionizer --update
-```
-
-**Note:** you can add `ionizer --update` into `crontab` to automate the blocklist updates.
+> you can add `ionizer --update` into `crontab` to automate the blocklist updates.
 
 CLI options,
 
