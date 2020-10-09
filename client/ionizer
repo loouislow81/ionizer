@@ -92,17 +92,23 @@ aggregate_list() {
 
 harvest_list() {
   # --- args
-  adaway="https://raw.githubusercontent.com/loouislow81/ionizer/data/general/adaway.org/filters"
-  yoyo="https://raw.githubusercontent.com/loouislow81/ionizer/data/general/yoyo.org/filters"
-  malwaredomainlist="https://raw.githubusercontent.com/loouislow81/ionizer/data/general/malwaredomainlist.com/filters"
-  fakenews="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/fakenews/filters"
-  gambling="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/gambling/filters"
-  clefspeare13="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/porn/clefspeare13/filters"
-  sinfonietta="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/porn/sinfonietta/filters"
-  sinfoniettasnuff="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/porn/sinfonietta-snuff/filters"
-  tiuxo="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/porn/tiuxo/filters"
-  sinfonietta_s="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/social/sinfonietta/filters"
-  tiuxo_s="https://raw.githubusercontent.com/loouislow81/ionizer/master/data/class/social/tiuxo/filters"
+  source_path="https://raw.githubusercontent.com/loouislow81/ionizer/master/generator/data"
+  # ...
+  adaway="${source_path}/general/adaway.org/filters"
+  yoyo="${source_path}/general/yoyo.org/filters"
+  malwaredomainlist="${source_path}/data/general/malwaredomainlist.com/filters"
+  # ...
+  fakenews="${source_path}/class/fakenews/filters"
+  gambling="${source_path}/class/gambling/filters"
+  # ...
+  clefspeare13="${source_path}/class/porn/clefspeare13/filters"
+  sinfonietta="${source_path}/class/porn/sinfonietta/filters"
+  sinfoniettasnuff="${source_path}/class/porn/sinfonietta-snuff/filters"
+  tiuxo="${source_path}/class/porn/tiuxo/filters"
+  # ...
+  sinfonietta_s="${source_path}/class/social/sinfonietta/filters"
+  tiuxo_s="${source_path}/class/social/tiuxo/filters"
+  # ...
   general=($adaway $yoyo $malwaredomainlist)
   porn=($clefspeare13 $sinfonietta $sinfoniettasnuff $tiuxo)
   social=($sinfonietta_s $tiuxo_s)
