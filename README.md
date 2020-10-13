@@ -1,5 +1,7 @@
 # ionizer v0.0.4
 
+> **⚠** Filter data update bi-weekly.
+
 <p align="left">
   <img src="https://badgen.net/github/release/loouislow81/ionizer">
   <img src="https://badgen.net/github/releases/loouislow81/ionizer">
