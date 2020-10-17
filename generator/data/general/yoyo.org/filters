@@ -2,8 +2,8 @@
 #
 # For more information about this list, see: https://pgl.yoyo.org/adservers/
 # ----
-# last updated:   Mon, 05 Oct 2020 15:12:50 GMT
-# entries:        3541
+# last updated:   Tue, 13 Oct 2020 10:56:58 GMT
+# entries:        3545
 # format:         hosts (hosts -- in hosts file format)
 # credits:        Peter Lowe - pgl@yoyo.org - https://pgl.yoyo.org/ - https://twitter.com/pgl
 # this URL:       https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
@@ -11,7 +11,7 @@
 # other formats:  https://pgl.yoyo.org/adservers/formats.php
 # policy:         https://pgl.yoyo.org/adservers/policy.php
 #
-# start date:    Mon, 16 Oct 2000 00:00:00
+# start date:    Sun, 22 Oct 2000 00:00:00
 0.0.0.0 1-1ads.com
 0.0.0.0 101com.com
 0.0.0.0 101order.com
@@ -342,6 +342,8 @@
 0.0.0.0 admized.com
 0.0.0.0 admob.com
 0.0.0.0 admonitor.com
+0.0.0.0 admotion.com.ar
+0.0.0.0 adn.lrb.co.uk
 0.0.0.0 adnet.asahi.com
 0.0.0.0 adnet.biz
 0.0.0.0 adnet.de
@@ -987,6 +989,7 @@
 0.0.0.0 adyea.com
 0.0.0.0 adyoulike.com
 0.0.0.0 adz.rashflash.com
+0.0.0.0 adz2you.com
 0.0.0.0 adzbazar.com
 0.0.0.0 adzerk.net
 0.0.0.0 adzerk.s3.amazonaws.com
@@ -1287,6 +1290,7 @@
 0.0.0.0 blogherads.com
 0.0.0.0 blogtoplist.se
 0.0.0.0 blogtopsites.com
+0.0.0.0 blueadvertise.com
 0.0.0.0 blueconic.com
 0.0.0.0 blueconic.net
 0.0.0.0 bluekai.com
@@ -1472,7 +1476,6 @@
 0.0.0.0 coin-hive.com
 0.0.0.0 coinhive.com
 0.0.0.0 cointraffic.io
-0.0.0.0 collector-medium.lightstep.com
 0.0.0.0 colonize.com
 0.0.0.0 comclick.com
 0.0.0.0 comfortablecheese.com
@@ -1655,7 +1658,6 @@
 0.0.0.0 dsp.io
 0.0.0.0 dstillery.com
 0.0.0.0 dyntrk.com
-0.0.0.0 dzairads.com
 0.0.0.0 e-adimages.scrippsnetworks.com
 0.0.0.0 e-bannerx.com
 0.0.0.0 e-m.fr
@@ -1667,7 +1669,6 @@
 0.0.0.0 eas.almamedia.fi
 0.0.0.0 easyhits4u.com
 0.0.0.0 ebayadvertising.com
-0.0.0.0 ebocornac.com
 0.0.0.0 ebuzzing.com
 0.0.0.0 ecircle-ag.com
 0.0.0.0 ecleneue.com
@@ -1892,6 +1893,7 @@
 0.0.0.0 gotraffic.net
 0.0.0.0 gp.dejanews.com
 0.0.0.0 gracefulsock.com
+0.0.0.0 graizoah.com
 0.0.0.0 grandioseguide.com
 0.0.0.0 grapeshot.co.uk
 0.0.0.0 greetzebra.com
@@ -2020,6 +2022,7 @@
 0.0.0.0 imonomy.com
 0.0.0.0 importedincrease.com
 0.0.0.0 impossibleexpansion.com
+0.0.0.0 imprese.cz
 0.0.0.0 impressionmedia.cz
 0.0.0.0 impressionmonster.com
 0.0.0.0 impressionz.co.uk
@@ -2468,7 +2471,6 @@
 0.0.0.0 oas.toronto.com
 0.0.0.0 oas.uniontrib.com
 0.0.0.0 oas.villagevoice.com
-0.0.0.0 oascentral.businessweek.com
 0.0.0.0 oascentral.chicagobusiness.com
 0.0.0.0 oascentral.fortunecity.com
 0.0.0.0 oascentral.register.com
@@ -2515,6 +2517,7 @@
 0.0.0.0 openx.aosis.co.za
 0.0.0.0 openx.cairo360.com
 0.0.0.0 openx.kgmedia.eu
+0.0.0.0 openx.net
 0.0.0.0 openx.skinet.cz
 0.0.0.0 openx.smcaen.fr
 0.0.0.0 openx2.kytary.cz
@@ -2850,7 +2853,6 @@
 0.0.0.0 rs6.net
 0.0.0.0 rta.dailymail.co.uk
 0.0.0.0 rtb.gumgum.com
-0.0.0.0 rtb.openx.net
 0.0.0.0 rtbadzesto.com
 0.0.0.0 rtbflairads.com
 0.0.0.0 rtbidhost.com
@@ -2896,6 +2898,7 @@
 0.0.0.0 sdcswingers.online
 0.0.0.0 sdkfjxjertertry.com
 0.0.0.0 seadform.net
+0.0.0.0 searching-place.com
 0.0.0.0 searchmarketing.com
 0.0.0.0 searchramp.com
 0.0.0.0 secretivecub.com
@@ -3348,6 +3351,7 @@
 0.0.0.0 ultraoranges.com
 0.0.0.0 unarmedindustry.com
 0.0.0.0 undertone.com
+0.0.0.0 universcine.com
 0.0.0.0 unknowntray.com
 0.0.0.0 unrulymedia.com
 0.0.0.0 untd.com
