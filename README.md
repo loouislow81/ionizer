@@ -2,8 +2,6 @@
 
 > **⚠** Filter data updated on (17 OCT 2020), total 23,245 hosts.
 
-> **⚠** Filter data update bi-weekly.
-
 <p align="left">
   <img src="https://badgen.net/github/release/loouislow81/ionizer">
   <img src="https://badgen.net/github/releases/loouislow81/ionizer">
