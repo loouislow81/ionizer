@@ -8,7 +8,7 @@
 # Please forward any additions, corrections or comments by email to
 # hosts@someonewhocares.org
 
-# Last updated: Fri, 23 Oct 2020 at 02:10:23 GMT
+# Last updated: Sun, 22 Nov 2020 at 05:08:54 GMT
 
 # Use this file to prevent your computer from connecting to selected
 # internet hosts. This is an easy and effective way to protect you from 
@@ -2182,6 +2182,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 andrionmobileapp.bid
 0.0.0.0 android.bigresource.com
 0.0.0.0 androiddev.orkitra.com
+0.0.0.0 aneralflas.club
 0.0.0.0 angeing.info
 0.0.0.0 anouslab.cmail20.com
 0.0.0.0 answerhub.com
@@ -2228,6 +2229,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 b.webwise.com
 0.0.0.0 b.webwise.net
 0.0.0.0 b.webwise.org
+0.0.0.0 backlusjumpdur.club
 0.0.0.0 badmactogoodmac.space
 0.0.0.0 badmactogoodmac.tech
 0.0.0.0 beloysoff.ru
@@ -2239,6 +2241,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 bighow.net
 0.0.0.0 binsservicesonline.info
 0.0.0.0 bir.snjack.info
+0.0.0.0 bitcoin-upappl.com
 0.0.0.0 bitcoinplus.com
 0.0.0.0 bj02.cww.com
 0.0.0.0 blackhat.be
@@ -2366,6 +2369,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 expertland.net
 0.0.0.0 expired-antiviruses.com
 0.0.0.0 extinstalls.icu
+0.0.0.0 f-trak.rumahkerennn.com
 0.0.0.0 f05098.privacy4browsers.com
 0.0.0.0 f150123.privacy4browsing.com
 0.0.0.0 f18085.privacy4browsers.com
@@ -2384,6 +2388,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 filosvybfimpsv.ru.gg
 0.0.0.0 filter.mediacpc.com
 0.0.0.0 find-your-profithere11.com
+0.0.0.0 find-yourprofithere.life
 0.0.0.0 firefox-updater.com
 0.0.0.0 firefox.net-secure-update.icu
 0.0.0.0 fndsdaytings.com
@@ -2440,6 +2445,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 himicrosoft.com
 0.0.0.0 hintonsfeetred.info
 0.0.0.0 honouncil.info
+0.0.0.0 hot24profit.life
 0.0.0.0 hotchix.servepics.com
 0.0.0.0 how-tosolve.com
 0.0.0.0 howtobuildsoftware.com
@@ -2587,6 +2593,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 meta.osqa.net
 0.0.0.0 metcoc5cm.clarent.com
 0.0.0.0 metedbuenge.info
+0.0.0.0 mfkmyve.retrocoder.org
 0.0.0.0 microsoft.com-it2-dye1.premi-fedelta-degli-utenti.us
 0.0.0.0 microsoft.com-msoft52.info
 0.0.0.0 microsoftsecurity-experts7565.xyz
@@ -2613,6 +2620,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 mp3red.cc
 0.0.0.0 mpkhi-bk.multi.net.pk
 0.0.0.0 mplayerdownloader.com
+0.0.0.0 ms-shopplus.su
 0.0.0.0 ms127.0.0.101341.club
 0.0.0.0 msgstore2.pldtprv.net
 0.0.0.0 mshelp247.weebly.com
@@ -2765,6 +2773,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 pigredoben12.sytes.net
 0.0.0.0 pilltabletsrxbargain.net
 0.0.0.0 play6932.fuckingmonday113.agency
+0.0.0.0 poonstwifterspick.work
 0.0.0.0 pop.net21pk.com
 0.0.0.0 post.netchina.com.cn
 0.0.0.0 postbox.mos.ru
@@ -2817,6 +2826,8 @@ ff02::3		ip6-allhosts
 0.0.0.0 s4d.in
 0.0.0.0 safedownloadcenter.com
 0.0.0.0 safedownloadsrus166.com
+0.0.0.0 saleprice.su
+0.0.0.0 saletrybest.su
 0.0.0.0 sazadubo48.bid
 0.0.0.0 sc-spyware.com
 0.0.0.0 scan.antispyware-free-scanner.com
@@ -2853,6 +2864,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 shell.xhhow4.com
 0.0.0.0 shop.skin-safety.com
 0.0.0.0 shoppstop.comood.opsource.net
+0.0.0.0 shoptrustup.su
 0.0.0.0 signin-ebay-com-ws-ebayisapi-dll-signin-webscr.ocom.pl
 0.0.0.0 simplyfwd.com
 0.0.0.0 sincentre.info
@@ -2979,6 +2991,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 videoamp.com
 0.0.0.0 videos.dskjkiuw.com
 0.0.0.0 videos.twitter.secure-logins01.com # twitter worm (http://mashable.com/2009/09/23/twitter-worm-dms/)
+0.0.0.0 viowyf.khaiafi.com
 0.0.0.0 vip.fortunatetime.xyz
 0.0.0.0 virus-notice.com
 0.0.0.0 voyager1.telesat.com.co
@@ -3014,6 +3027,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 wk4x5rdtoz2tn0.com
 0.0.0.0 wm.maxysearch.info
 0.0.0.0 womo.corrmedic.ru
+0.0.0.0 worldnewstoday.site
 0.0.0.0 wrontonshatbona.pro
 0.0.0.0 ws.xjb.ac.cn
 0.0.0.0 ws05.crypto-loot.com
@@ -3056,6 +3070,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 www.bankingservices.xyz
 0.0.0.0 www.bankofamerica.com.ok.am
 0.0.0.0 www.be4life.ru
+0.0.0.0 www.bicoinsprofit.com
 0.0.0.0 www.blender3d.fr
 0.0.0.0 www.blenz-me.net
 0.0.0.0 www.bumerang.cc
@@ -3265,6 +3280,7 @@ ff02::3		ip6-allhosts
 0.0.0.0 yrwap.cn
 0.0.0.0 zarozinski.info
 0.0.0.0 zb1.zeroredirect1.com
+0.0.0.0 zelaiu.tradinginthefinancial.live
 0.0.0.0 zenigameblinger.org
 0.0.0.0 zettapetta.com
 0.0.0.0 zfotos.fromru.su
