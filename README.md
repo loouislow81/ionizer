@@ -1,6 +1,6 @@
 # ionizer v0.0.4
 
-> **⚠** Filter data updated on (17 OCT 2020), total 23,245 hosts.
+> **⚠** Filter data updated on (22 NOV 2020), total 23,245 hosts.
 
 <p align="left">
   <img src="https://badgen.net/github/release/loouislow81/ionizer">
