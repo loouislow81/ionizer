@@ -1,6 +1,6 @@
 # ionizer v0.0.4
 
-> **⚠** Filter hosts data updated on (21 DEC 2020).
+> **⚠** Filter hosts data updated on (27 DEC 2020).
 
 <p align="left">
   <img src="https://badgen.net/github/release/loouislow81/ionizer">
